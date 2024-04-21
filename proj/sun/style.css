@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #292929;
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.universe{
+  height: 60vh;
+  aspect-ratio: 1;
+  background-color: #f7f3eb;
+  display: grid;
+  place-items: center;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;
+  */border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  animation: bg-change 5s ease-in-out infinite;
+  -webkit-animation: bg-change 5s ease-in-out infinite;
+}
+.sun{
+  width: 40%;
+  aspect-ratio: 1;
+  background-color: #df0909;
+  box-shadow: 0 0 50px #f73606;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  
+}
+.sun::after{
+  content: "";
+  width: 100%;
+  /*height: 100%;
+  */aspect-ratio: 1;
+  top: 0;
+  left: 0;
+  background-color: #f3dfdf;
+  box-shadow: 0 0 50px #fad0d0;
+  position: absolute;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  animation: moonwalk 5s ease-in-out infinite;
+  -webkit-animation: moonwalk 5s ease-in-out infinite;
+}
+@keyframes moonwalk {
+  0%{
+    translate: 100%;
+    scale: 1;
+    background-color: #f7eedf;
+  }
+  50%{
+    translate: 0%;
+    scale: .9;
+    background-color: #1a1918;
+  }
+  100%{
+    translate: -100%;
+    scale: 1;
+    background-color: #f7eddb;
+  }
+}
+@keyframes bg-change {
+  0%{
+    background-color: #faf6ee;
+  }
+  25%{
+    background-color: #b9dbdb;
+  }
+  50%{
+    background-color: #4b4242;
+  }
+  75%{
+    background-color: #9bc7c0;
+  }
+  100%{
+    background-color: #f5efe3;
+  }
+}

@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #222;
+}
+.container{
+  width: 60vw;
+  height: 50rem;
+  border-radius: 1rem;
+  
+  box-shadow: rgba(5, 5, 73, 0.9) 0px 7px 29px 0px;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+ 
+  
+  background-size: cover;
+  animation: gallery 20s linear infinite;
+  -webkit-animation: gallery 20s linear infinite;
+}
+@keyframes gallery {
+  0%{
+    background-image: url(../../00CSS/images/code.png);
+  }
+  20%{
+    background-image: url(../../00CSS/images/css.png);
+  }
+  40%{
+    background-image: url(../../00CSS/images/headphone.png);
+  }
+  60%{
+    background-image: url(../../00CSS/images/hero.png);
+  }
+  80%{
+    background-image: url(../../00CSS/images/recharge.png);
+  }
+  100%{
+    background-image: url(../../00CSS/images/brand.png);
+  }
+
+}
+
+
+
+/* Loader */
+
+.loader{
+  width: 20rem;
+  aspect-ratio: 1;
+  background-color: #529ebd;
+  position: relative;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: circle 2s linear infinite reverse;
+  -webkit-animation: circle 2s linear infinite reverse;
+}
+.loader::before{
+  content: "";
+  width: 17rem;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #222;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  
+}
+
+.loader::after{
+  content: "";
+  width: 5rem;
+  aspect-ratio: 1;
+  position: absolute;
+  top: -2rem;
+  left: 5rem;
+  background-color: #529ebd;
+  box-shadow: 0 0 1rem #529ebd,0 0 1.5rem #529ebd,0 0 2rem #529ebd,0 0 2.5rem #529ebd,0 0 3rem #529ebd;
+  
+
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+@keyframes circle {
+  100%{
+    rotate: 360deg;
+  }
+}
+

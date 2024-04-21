@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(26, 25, 25);
+  height: 100vh;
+
+  /* Centering Div */
+
+  /* 1st trick */
+  /* position: relative; */
+
+
+  /* 2nd Trick */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 3rd Trick */
+  /* display: grid;
+  place-items: center; */
+
+  /* 4th Trick */
+  /* display: grid;
+  justify-content: center;
+  align-items: center; */
+
+  /* 5th Trick */
+  /* display: flex; */
+
+}
+.child{
+
+  /*1st trick*/
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  /* 5th Trick */
+  /* margin: auto; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+  font-size: x-large;
+  font-weight: 700;
+
+  width: 500px;
+  height:500px;
+  background-color: rgb(228, 212, 243);
+}
